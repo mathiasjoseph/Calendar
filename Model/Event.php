@@ -26,11 +26,24 @@ class Event
     protected $description;
 
     /**
+     * @var \DateTime
+     */
+    protected $dateFrom;
+
+    /**
+     * @var \DateTime
+     */
+    protected $dateTo;
+
+    /**
      * @var string
      */
     protected $type;
 
-
+    /**
+     * @var Agenda
+     */
+    protected $agenda;
 
     /**
      * Event constructor.
@@ -89,8 +102,51 @@ class Event
         $this->type = $type;
     }
 
+    /**
+     * @return Agenda
+     */
+    public function getAgenda()
+    {
+        return $this->agenda;
+    }
 
+    /**
+     * @param Agenda $agenda
+     */
+    public function setAgenda($agenda)
+    {
+        $this->agenda = $agenda;
+    }
 
+    /**
+     * @return \DateTime
+     */
+    public function getDateFrom()
+    {
+        return $this->dateFrom;
+    }
 
+    /**
+     * @param \DateTime $dateFrom
+     */
+    public function setDateFrom($dateFrom)
+    {
+        $this->dateFrom = $dateFrom;
+    }
 
+    /**
+     * @return \DateTime
+     */
+    public function getDateTo()
+    {
+        return $this->dateTo;
+    }
+
+    /**
+     * @param \DateTime $dateTo
+     */
+    public function setDateTo($dateTo)
+    {
+        $this->dateTo = $dateTo;
+    }
 }
